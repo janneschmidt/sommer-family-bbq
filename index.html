@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f5efe2" />
+    <meta name="description" content="Sommer-Family-BBQ am 8. August 2026 in Kapellen-Drusweiler" />
+    <title>Sommer-Family-BBQ</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Fraunces:opsz,wght@9..144,500;9..144,600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <header class="hero" id="start">
+      <nav class="nav shell" aria-label="Hauptnavigation">
+        <a class="wordmark" href="#start" aria-label="Zum Seitenanfang">Family BBQ <span>✿</span></a>
+        <div class="nav-links">
+          <a href="#infos">Infos</a>
+          <a href="#mitbringen">Mitbringen</a>
+          <a href="#anfahrt">Anfahrt</a>
+        </div>
+      </nav>
+
+      <div class="hero-photo" role="img" aria-label="Ein Hund steht im sonnigen Garten"></div>
+      <div class="hero-shade"></div>
+      <div class="hero-content shell">
+        <p class="eyebrow light">Familiengrillen bei Mama im Garten</p>
+        <h1>Sommer-<br />Family-BBQ</h1>
+        <p class="hero-copy">Ein langer Sommertag, etwas Gutes vom Grill und die ganze Familie an einem Tisch.</p>
+        <a class="button button-light" href="#mitbringen">Ich bringe etwas mit <span>↓</span></a>
+      </div>
+      <div class="date-card" aria-label="Termin">
+        <span class="date-day">08</span>
+        <span class="date-month">August</span>
+        <span class="date-year">2026</span>
+      </div>
+    </header>
+
+    <main>
+      <section class="intro shell" id="infos">
+        <div>
+          <p class="eyebrow">Wir freuen uns auf euch</p>
+          <h2>Kommt vorbei.<br />Der Garten wartet.</h2>
+        </div>
+        <p class="intro-copy">Wir treffen uns zum entspannten Gartengrillfest in Kapellen-Drusweiler. Für Grillgut und Getränke ist gesorgt – Salate und Nachtische sind als Verstärkung herzlich willkommen.</p>
+
+        <div class="info-grid">
+          <article class="info-card">
+            <span class="info-icon">☀</span>
+            <div><p>Wann</p><h3>Samstag, 8. August</h3><span>Beginn wird noch bekannt gegeben</span></div>
+          </article>
+          <article class="info-card">
+            <span class="info-icon">⌂</span>
+            <div><p>Wo</p><h3>Bei Mama im Garten</h3><span>Obere Hauptstraße 43a<br />76889 Kapellen-Drusweiler</span></div>
+          </article>
+          <article class="info-card weather-card">
+            <span class="info-icon" id="weatherIcon">◌</span>
+            <div><p>Wetter</p><h3 id="weatherTitle">Noch ein bisschen Geduld</h3><span id="weatherText">Die Vorhersage erscheint, sobald der Termin näher rückt.</span></div>
+          </article>
+        </div>
+      </section>
+
+      <section class="garden-break" aria-label="Unser Garten">
+        <img src="garten.jpeg" alt="Der grüne Garten mit Blumenbeeten und Bäumen" />
+        <blockquote>„Draußen schmeckt’s<br />doch am besten.“</blockquote>
+      </section>
+
+      <section class="bring-section" id="mitbringen">
+        <div class="shell bring-layout">
+          <div class="bring-intro">
+            <p class="eyebrow">Unser gemeinsames Buffet</p>
+            <h2>Was bringst<br />du mit?</h2>
+            <p>Damit am Ende nicht fünf Nudelsalate und kein Nachtisch auf dem Tisch stehen: Trag einfach kurz ein, womit du unser Buffet bereicherst.</p>
+            <div class="rose-frame"><img src="rose.jpeg" alt="Eine pinke Rose im Garten" /></div>
+          </div>
+
+          <div class="bring-board">
+            <form id="bringForm" class="bring-form">
+              <input type="hidden" id="entryId" />
+              <input type="hidden" id="editToken" />
+              <div class="form-heading">
+                <span class="number">01</span>
+                <div><h3 id="formTitle">Zum Buffet beitragen</h3><p>Nur zwei Angaben – dann bist du schon dabei.</p></div>
+              </div>
+              <label>Dein Name<input id="name" name="name" maxlength="50" placeholder="z. B. Tante Anne" required /></label>
+              <label>Was bringst du mit?<input id="item" name="item" maxlength="80" placeholder="z. B. Kartoffelsalat" required /></label>
+              <fieldset>
+                <legend>Kategorie</legend>
+                <div class="chips">
+                  <label><input type="radio" name="category" value="Salat" checked /><span>🥗 Salat</span></label>
+                  <label><input type="radio" name="category" value="Nachtisch" /><span>🍰 Nachtisch</span></label>
+                  <label><input type="radio" name="category" value="Sonstiges" /><span>🧺 Sonstiges</span></label>
+                </div>
+              </fieldset>
+              <label>Hinweis <small>optional</small><textarea id="note" name="note" maxlength="160" rows="3" placeholder="Vegetarisch, enthält Nüsse …"></textarea></label>
+              <button class="button button-primary" type="submit"><span id="submitText">Eintragen</span><span>→</span></button>
+              <button class="text-button hidden" type="button" id="cancelEdit">Bearbeitung abbrechen</button>
+            </form>
+
+            <div class="list-wrap">
+              <div class="list-heading"><span class="number">02</span><div><h3>Wer bringt was mit?</h3><p><span id="entryCount">0</span> Beiträge für unser Buffet</p></div></div>
+              <div id="emptyState" class="empty-state"><span>✿</span><h4>Der Tisch ist noch leer</h4><p>Mach den Anfang und trag deine Leckerei ein.</p></div>
+              <div id="bringList" class="bring-list" aria-live="polite"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="location shell" id="anfahrt">
+        <div class="location-copy">
+          <p class="eyebrow">Hier müsst ihr hin</p>
+          <h2>Ab in den Garten.</h2>
+          <p class="address">Obere Hauptstraße 43a<br />76889 Kapellen-Drusweiler</p>
+          <div class="parking-note"><span>🚗</span><p><strong>Einfach die Einfahrt hochfahren.</strong><br />Parken gerne direkt in der Einfahrt. Wer zuerst kommt, muss als Letztes gehen. 😁</p></div>
+          <a class="button button-primary maps-link" href="https://www.google.com/maps/search/?api=1&query=Obere+Hauptstraße+43a,+76889+Kapellen-Drusweiler" target="_blank" rel="noreferrer">Route in Google Maps <span>↗</span></a>
+        </div>
+        <div class="map-wrap">
+          <iframe title="Karte zur Oberen Hauptstraße 43a in Kapellen-Drusweiler" src="https://www.google.com/maps?q=Obere+Hauptstraße+43a,+76889+Kapellen-Drusweiler&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="shell"><p>Wir freuen uns auf euch! <span>♥</span></p><a href="#start">Nach oben ↑</a></div>
+    </footer>
+
+    <dialog id="successDialog">
+      <button class="dialog-close" aria-label="Schließen">×</button>
+      <span class="dialog-flower">✿</span>
+      <h3>Steht auf der Liste!</h3>
+      <p>Danke – dein Beitrag ist eingetragen. Über diesen persönlichen Link kannst nur du ihn später ändern oder löschen:</p>
+      <div class="secret-link"><input id="secretLink" readonly /><button id="copyLink">Kopieren</button></div>
+      <small>Am besten jetzt kurz speichern oder an dich selbst schicken.</small>
+    </dialog>
+    <div id="toast" role="status" aria-live="polite"></div>
+  </body>
+</html>
