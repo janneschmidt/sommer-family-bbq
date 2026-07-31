@@ -78,7 +78,7 @@ async function loadEntries({ quiet = false } = {}) {
 
   try {
     entries = await rpc("list_bbq_contributions");
-    bringEmptyState.innerHTML = `<span>✿</span><h4>Der Tisch ist noch leer</h4><p>Mach den Anfang und trag deine Leckerei ein.</p>`;
+    bringEmptyState.innerHTML = `<span>✿</span><h4>Noch ist der Tisch leer.</h4><p>Mach den Anfang und trag etwas ein.</p>`;
     renderEntries();
   } catch (error) {
     bringEmptyState.classList.remove("hidden");
@@ -90,7 +90,6 @@ function openEntryEditor(entry) {
   document.querySelector("#entryId").value = entry.id;
   document.querySelector("#name").value = entry.name;
   document.querySelector("#item").value = entry.item;
-  document.querySelector("#note").value = entry.note || "";
   document.querySelector(`input[name="category"][value="${entry.category}"]`).checked = true;
   document.querySelector("#formTitle").textContent = "Beitrag bearbeiten";
   document.querySelector("#submitText").textContent = "Änderungen speichern";
@@ -101,8 +100,8 @@ function openEntryEditor(entry) {
 function resetEntryForm() {
   bringForm.reset();
   document.querySelector("#entryId").value = "";
-  document.querySelector("#formTitle").textContent = "Zum Buffet beitragen";
-  document.querySelector("#submitText").textContent = "Eintragen";
+  document.querySelector("#formTitle").textContent = "Was bringst du mit?";
+  document.querySelector("#submitText").textContent = "Mitbringen";
   cancelEdit.classList.add("hidden");
 }
 
@@ -120,7 +119,7 @@ bringForm.addEventListener("submit", async (event) => {
     p_name: data.get("name").trim(),
     p_item: data.get("item").trim(),
     p_category: data.get("category"),
-    p_note: data.get("note").trim(),
+    p_note: "",
   };
 
   setFormBusy(bringForm, true);
@@ -191,7 +190,7 @@ async function loadComments({ quiet = false } = {}) {
 
   try {
     comments = await rpc("list_bbq_comments");
-    commentEmptyState.innerHTML = `<span>✿</span><h4>Noch ganz still hier</h4><p>Hinterlass den ersten Gruß.</p>`;
+    commentEmptyState.innerHTML = `<span>✿</span><h4>Noch herrscht Funkstille.</h4><p>Starte den Buschfunk mit der ersten Nachricht.</p>`;
     renderComments();
   } catch (error) {
     commentEmptyState.classList.remove("hidden");
@@ -257,7 +256,6 @@ async function loadWeather() {
     const min = Math.round(forecast.daily.temperature_2m_min[0]);
     const rain = forecast.daily.precipitation_probability_max[0];
 
-    document.querySelector("#weatherIcon").textContent = rain > 45 ? "☂" : "☀";
     document.querySelector("#weatherTitle").textContent = `${min}–${max} °C`;
     document.querySelector("#weatherText").textContent = `${rain} % Regenwahrscheinlichkeit · Prognose für Kapellen-Drusweiler`;
   } catch {

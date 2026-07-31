@@ -5,12 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#f5efe2" />
     <meta name="description" content="Sommer-Family-BBQ am 8. August 2026 in Kapellen-Drusweiler" />
+    <meta name="robots" content="noindex, nofollow" />
     <title>Sommer-Family-BBQ</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Fraunces:opsz,wght@9..144,500;9..144,600&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="styles.css" />
-    <script src="app.js" defer></script>
+    <link rel="stylesheet" href="styles.css?v=3" />
+    <script src="app.js?v=3" defer></script>
   </head>
   <body>
     <header class="hero" id="start">
@@ -19,20 +20,20 @@
         <div class="nav-links">
           <a href="#infos">Infos</a>
           <a href="#mitbringen">Mitbringen</a>
-          <a href="#gaestebuch">Gästebuch</a>
+          <a href="#buschfunk">Buschfunk</a>
           <a href="#anfahrt">Anfahrt</a>
         </div>
       </nav>
 
-      <div class="hero-photo" role="img" aria-label="Ein Hund steht im sonnigen Garten"></div>
+      <div class="hero-photo" role="img" aria-label="Sunny steht im sonnigen Garten"></div>
       <div class="hero-shade"></div>
       <div class="hero-content shell">
-        <p class="eyebrow light">Familiengrillen im Garten</p>
+        <p class="eyebrow light">Familienfest · 8. August 2026</p>
         <h1>Sommer-<br />Family-BBQ</h1>
-        <p class="hero-copy">Ein langer Sommertag, etwas Gutes vom Grill und die ganze Familie an einem Tisch.</p>
-        <a class="button button-light" href="#mitbringen">Ich bringe etwas mit <span>↓</span></a>
+        <p class="hero-copy">Gemeinsam grillen, genießen und einen langen Sommerabend im Garten verbringen.</p>
+        <a class="button button-light" href="#infos">Alle Infos ansehen <span>↓</span></a>
       </div>
-      <div class="date-card" aria-label="Termin">
+      <div class="date-card" aria-label="Termin am 8. August 2026">
         <span class="date-day">08</span>
         <span class="date-month">August</span>
         <span class="date-year">2026</span>
@@ -41,51 +42,49 @@
 
     <main>
       <section class="intro shell" id="infos">
-        <div>
-          <p class="eyebrow">Wir freuen uns auf euch</p>
-          <h2>Kommt vorbei.<br />Der Garten wartet.</h2>
+        <div class="section-heading">
+          <p class="eyebrow">Das Wichtigste auf einen Blick</p>
+          <h2>Ein Sommerabend<br />für die ganze Familie.</h2>
         </div>
-        <p class="intro-copy">Wir treffen uns zum entspannten Gartengrillfest in Kapellen-Drusweiler. Für Grillgut und Getränke ist gesorgt – Salate und Nachtische sind als Verstärkung herzlich willkommen.</p>
+        <p class="intro-copy">Am Samstag, den 8. August, kommen wir zum gemeinsamen Grillen in Kapellen-Drusweiler zusammen. Für Grillgut und Getränke ist gesorgt. Über Salate, Nachtische und andere Beiträge für unser gemeinsames Buffet freuen wir uns sehr.</p>
 
         <div class="info-grid">
           <article class="info-card">
-            <span class="info-icon">☀</span>
-            <div><p>Wann</p><h3>Samstag, 8. August</h3><span>Beginn wird noch bekannt gegeben</span></div>
+            <svg class="info-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3v3M17 3v3M4 9h16M5 5h14a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1Z"/></svg>
+            <div><p>Wann</p><h3>Samstag, 8. August 2026</h3><span>Ankommen ab 14:00 Uhr<br />Gegrillt wird später, sobald der Hunger kommt.</span></div>
           </article>
           <article class="info-card">
-            <span class="info-icon">⌂</span>
-            <div><p>Wo</p><h3>Gartenfest in Kapellen-Drusweiler</h3><span>Obere Hauptstraße 43a<br />76889 Kapellen-Drusweiler</span></div>
+            <svg class="info-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></svg>
+            <div><p>Wo</p><h3>Kapellen-Drusweiler</h3><span>Obere Hauptstraße 43a<br />76889 Kapellen-Drusweiler</span></div>
           </article>
           <article class="info-card weather-card">
-            <span class="info-icon" id="weatherIcon">◌</span>
-            <div><p>Wetter</p><h3 id="weatherTitle">Prognose ab 23. Juli</h3><span id="weatherText">Dann liegt der 8. August im verlässlichen Vorhersagezeitraum.</span></div>
+            <svg class="info-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="9" r="4"/><path d="M9 2v2M9 14v2M2 9h2M14 9h2M4 4l1.5 1.5M12.5 12.5 14 14M16 19h3a3 3 0 0 0 .4-6A5 5 0 0 0 10 15"/></svg>
+            <div><p>Wetter</p><h3 id="weatherTitle">Wetter wird geladen</h3><span id="weatherText">Die aktuelle Prognose erscheint hier automatisch.</span></div>
           </article>
         </div>
       </section>
 
-      <section class="garden-break" aria-label="Unser Garten">
-        <img src="garten.jpeg" alt="Der grüne Garten mit Blumenbeeten und Bäumen" />
-        <blockquote>„Draußen schmeckt’s<br />doch am besten.“</blockquote>
+      <section class="garden-break" aria-label="Der Garten in Kapellen-Drusweiler">
+        <img src="garten-uebersicht.jpeg" alt="Blick über den Garten mit Rasenfläche und Blumenbeeten" />
+        <div class="garden-shade"></div>
+        <p class="garden-statement">Ankommen. Anstoßen. Angrillen.</p>
       </section>
 
       <section class="bring-section" id="mitbringen">
         <div class="shell bring-layout">
           <div class="bring-intro">
-            <p class="eyebrow">Unser gemeinsames Buffet</p>
-            <h2>Was bringst<br />du mit?</h2>
-            <p>Damit am Ende nicht fünf Nudelsalate und kein Nachtisch auf dem Tisch stehen: Trag einfach kurz ein, womit du unser Buffet bereicherst. Alle können die Liste gemeinsam pflegen.</p>
-            <div class="rose-frame"><img src="rose.jpeg" alt="Eine pinke Rose im Garten" /></div>
+            <p class="eyebrow">Tischlein deck dich</p>
+            <h2>Unser<br />Mitbringbuffet.</h2>
+            <p>Für Grillgut und Getränke ist gesorgt. Salate, Nachtische und alles, was ihr sonst gerne teilen möchtet, ergänzen unser Buffet. Tragt einfach ein, was ihr mitbringt – die Liste kann von allen gemeinsam angepasst werden.</p>
+            <div class="editorial-photo"><img src="blumenbeet.jpeg" alt="Blühendes Gartenbeet mit gelber Gartenblume" /></div>
           </div>
 
           <div class="bring-board">
             <form id="bringForm" class="bring-form">
               <input type="hidden" id="entryId" />
-              <div class="form-heading">
-                <span class="number">01</span>
-                <div><h3 id="formTitle">Zum Buffet beitragen</h3><p>Nur zwei Angaben – dann bist du schon dabei.</p></div>
-              </div>
-              <label>Dein Name<input id="name" name="name" maxlength="50" placeholder="z. B. Tante Anne" required /></label>
-              <label>Was bringst du mit?<input id="item" name="item" maxlength="80" placeholder="z. B. Kartoffelsalat" required /></label>
+              <div class="form-heading"><h3 id="formTitle">Was bringst du mit?</h3></div>
+              <label>Dein Name<input id="name" name="name" maxlength="50" placeholder="Boris Becker" required /></label>
+              <label>Dein Mitbringsel<input id="item" name="item" maxlength="80" placeholder="Karottensalat" required /></label>
               <fieldset>
                 <legend>Kategorie</legend>
                 <div class="chips">
@@ -94,42 +93,39 @@
                   <label><input type="radio" name="category" value="Sonstiges" /><span>🧺 Sonstiges</span></label>
                 </div>
               </fieldset>
-              <label>Hinweis <small>optional</small><textarea id="note" name="note" maxlength="160" rows="3" placeholder="Vegetarisch, enthält Nüsse …"></textarea></label>
-              <button class="button button-primary" type="submit"><span id="submitText">Eintragen</span><span>→</span></button>
+              <button class="button button-primary button-compact" type="submit"><span id="submitText">Mitbringen</span><span>→</span></button>
               <button class="text-button hidden" type="button" id="cancelEdit">Bearbeitung abbrechen</button>
             </form>
 
             <div class="list-wrap">
-              <div class="list-heading"><span class="number">02</span><div><h3>Wer bringt was mit?</h3><p><span id="entryCount">0</span> Beiträge für unser Buffet</p></div></div>
-              <div id="emptyState" class="empty-state"><span>✿</span><h4>Der Tisch ist noch leer</h4><p>Mach den Anfang und trag deine Leckerei ein.</p></div>
+              <div class="list-heading"><div><h3>Schon eingeplant</h3><p><span id="entryCount">0</span> Beiträge für unser Buffet</p></div></div>
+              <div id="emptyState" class="empty-state"><span>✿</span><h4>Noch ist der Tisch leer.</h4><p>Mach den Anfang und trag etwas ein.</p></div>
               <div id="bringList" class="bring-list" aria-live="polite"></div>
             </div>
           </div>
         </div>
       </section>
 
-      <section class="guestbook-section" id="gaestebuch">
+      <section class="guestbook-section" id="buschfunk">
         <div class="shell guestbook-layout">
           <div class="guestbook-intro">
-            <p class="eyebrow">Grüße & Absprachen</p>
-            <h2>Unser<br />Gästebuch.</h2>
-            <p>Platz für Vorfreude, Fragen und kleine Absprachen rund ums Grillfest. Alle mit dem Link können schreiben und Nachrichten bei Bedarf wieder löschen.</p>
+            <p class="eyebrow light">Schreib mal wieder</p>
+            <h2>Buschfunk.</h2>
+            <p>Ob Grüße, Fragen, Fahrgemeinschaften oder spontane Absprachen – hier ist Platz für alles, was die Runde wissen darf.</p>
           </div>
 
           <div class="guestbook-board">
             <form id="commentForm" class="comment-form">
-              <div class="form-heading">
-                <span class="number">01</span>
-                <div><h3>Nachricht hinterlassen</h3><p>Kurz schreiben – und schon steht es im Gästebuch.</p></div>
-              </div>
-              <label>Dein Name<input id="commentName" name="name" maxlength="50" placeholder="z. B. Laura" required /></label>
-              <label>Deine Nachricht<textarea id="commentMessage" name="message" maxlength="500" rows="4" placeholder="Wir freuen uns schon! 🌞" required></textarea></label>
-              <button class="button button-primary" type="submit"><span id="commentSubmitText">Absenden</span><span>→</span></button>
+              <div class="form-heading"><h3>Nachricht hinterlassen</h3></div>
+              <label>Dein Name<input id="commentName" name="name" maxlength="50" placeholder="Steffi Graf" required /></label>
+              <label>Deine Nachricht<textarea id="commentMessage" name="message" maxlength="500" rows="4" placeholder="Wir freuen uns schon! 🌿" required></textarea></label>
+              <button class="button button-primary button-compact" type="submit"><span>Abschicken</span><span>→</span></button>
+              <small class="community-note">Nachrichten sind für alle mit dem Link sichtbar und können gemeinsam gelöscht werden.</small>
             </form>
 
             <div class="comments-wrap">
-              <div class="list-heading"><span class="number">02</span><div><h3>Familien-Chat</h3><p><span id="commentCount">0</span> Nachrichten</p></div></div>
-              <div id="commentEmptyState" class="empty-state"><span>✿</span><h4>Noch ganz still hier</h4><p>Hinterlass den ersten Gruß.</p></div>
+              <div class="list-heading"><div><h3>Aus der Runde</h3><p><span id="commentCount">0</span> Nachrichten</p></div></div>
+              <div id="commentEmptyState" class="empty-state"><span>✿</span><h4>Noch herrscht Funkstille.</h4><p>Starte den Buschfunk mit der ersten Nachricht.</p></div>
               <div id="commentList" class="comment-list" aria-live="polite"></div>
             </div>
           </div>
@@ -137,21 +133,26 @@
       </section>
 
       <section class="location shell" id="anfahrt">
+        <div class="aerial-wrap">
+          <img src="anfahrt-luftbild.jpg" alt="Luftaufnahme des Veranstaltungsorts in Kapellen-Drusweiler" />
+          <span class="location-pin" aria-hidden="true"><span></span></span>
+        </div>
         <div class="location-copy">
-          <p class="eyebrow">Hier müsst ihr hin</p>
+          <p class="eyebrow">Hier geht’s lang</p>
           <h2>Ab in den Garten.</h2>
           <p class="address">Obere Hauptstraße 43a<br />76889 Kapellen-Drusweiler</p>
-          <div class="parking-note"><span>🚗</span><p><strong>Einfach die Einfahrt hochfahren.</strong><br />Parken gerne direkt in der Einfahrt. Wer zuerst kommt, muss als Letztes gehen. 😁</p></div>
-          <a class="button button-primary maps-link" href="https://www.google.com/maps/search/?api=1&query=Obere+Hauptstraße+43a,+76889+Kapellen-Drusweiler" target="_blank" rel="noreferrer">Route in Google Maps <span>↗</span></a>
-        </div>
-        <div class="map-wrap">
-          <iframe title="Karte zur Oberen Hauptstraße 43a in Kapellen-Drusweiler" src="https://www.google.com/maps?q=Obere+Hauptstraße+43a,+76889+Kapellen-Drusweiler&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <div class="parking-note"><span class="parking-label">Parken</span><p>Fahrt einfach die Einfahrt hoch und parkt hintereinander. Dabei gilt die kleine Gartenregel: Wer zuerst kommt, fährt zuletzt. 😁</p></div>
+          <a class="button button-primary route-button" href="https://www.google.com/maps/search/?api=1&query=Obere+Hauptstraße+43a,+76889+Kapellen-Drusweiler" target="_blank" rel="noreferrer">Route starten <span>↗</span></a>
         </div>
       </section>
     </main>
 
     <footer>
-      <div class="shell"><p>Wir freuen uns auf euch! <span>♥</span></p><a href="#start">Nach oben ↑</a></div>
+      <div class="shell footer-grid">
+        <p class="footer-date">Sommer-Family-BBQ · 8. August 2026</p>
+        <p class="footer-message">Wir freuen uns auf euch. <span>♥</span></p>
+        <a href="#start">Nach oben ↑</a>
+      </div>
     </footer>
 
     <div id="toast" role="status" aria-live="polite"></div>
