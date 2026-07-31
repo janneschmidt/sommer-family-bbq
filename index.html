@@ -19,6 +19,7 @@
         <div class="nav-links">
           <a href="#infos">Infos</a>
           <a href="#mitbringen">Mitbringen</a>
+          <a href="#gaestebuch">Gästebuch</a>
           <a href="#anfahrt">Anfahrt</a>
         </div>
       </nav>
@@ -72,14 +73,13 @@
           <div class="bring-intro">
             <p class="eyebrow">Unser gemeinsames Buffet</p>
             <h2>Was bringst<br />du mit?</h2>
-            <p>Damit am Ende nicht fünf Nudelsalate und kein Nachtisch auf dem Tisch stehen: Trag einfach kurz ein, womit du unser Buffet bereicherst.</p>
+            <p>Damit am Ende nicht fünf Nudelsalate und kein Nachtisch auf dem Tisch stehen: Trag einfach kurz ein, womit du unser Buffet bereicherst. Alle können die Liste gemeinsam pflegen.</p>
             <div class="rose-frame"><img src="rose.jpeg" alt="Eine pinke Rose im Garten" /></div>
           </div>
 
           <div class="bring-board">
             <form id="bringForm" class="bring-form">
               <input type="hidden" id="entryId" />
-              <input type="hidden" id="editToken" />
               <div class="form-heading">
                 <span class="number">01</span>
                 <div><h3 id="formTitle">Zum Buffet beitragen</h3><p>Nur zwei Angaben – dann bist du schon dabei.</p></div>
@@ -108,6 +108,34 @@
         </div>
       </section>
 
+      <section class="guestbook-section" id="gaestebuch">
+        <div class="shell guestbook-layout">
+          <div class="guestbook-intro">
+            <p class="eyebrow">Grüße & Absprachen</p>
+            <h2>Unser<br />Gästebuch.</h2>
+            <p>Platz für Vorfreude, Fragen und kleine Absprachen rund ums Grillfest. Alle mit dem Link können schreiben und Nachrichten bei Bedarf wieder löschen.</p>
+          </div>
+
+          <div class="guestbook-board">
+            <form id="commentForm" class="comment-form">
+              <div class="form-heading">
+                <span class="number">01</span>
+                <div><h3>Nachricht hinterlassen</h3><p>Kurz schreiben – und schon steht es im Gästebuch.</p></div>
+              </div>
+              <label>Dein Name<input id="commentName" name="name" maxlength="50" placeholder="z. B. Laura" required /></label>
+              <label>Deine Nachricht<textarea id="commentMessage" name="message" maxlength="500" rows="4" placeholder="Wir freuen uns schon! 🌞" required></textarea></label>
+              <button class="button button-primary" type="submit"><span id="commentSubmitText">Absenden</span><span>→</span></button>
+            </form>
+
+            <div class="comments-wrap">
+              <div class="list-heading"><span class="number">02</span><div><h3>Familien-Chat</h3><p><span id="commentCount">0</span> Nachrichten</p></div></div>
+              <div id="commentEmptyState" class="empty-state"><span>✿</span><h4>Noch ganz still hier</h4><p>Hinterlass den ersten Gruß.</p></div>
+              <div id="commentList" class="comment-list" aria-live="polite"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section class="location shell" id="anfahrt">
         <div class="location-copy">
           <p class="eyebrow">Hier müsst ihr hin</p>
@@ -126,14 +154,6 @@
       <div class="shell"><p>Wir freuen uns auf euch! <span>♥</span></p><a href="#start">Nach oben ↑</a></div>
     </footer>
 
-    <dialog id="successDialog">
-      <button class="dialog-close" aria-label="Schließen">×</button>
-      <span class="dialog-flower">✿</span>
-      <h3>Steht auf der Liste!</h3>
-      <p>Danke – dein Beitrag ist eingetragen. Über diesen persönlichen Link kannst nur du ihn später ändern oder löschen:</p>
-      <div class="secret-link"><input id="secretLink" readonly /><button id="copyLink">Kopieren</button></div>
-      <small>Am besten jetzt kurz speichern oder an dich selbst schicken.</small>
-    </dialog>
     <div id="toast" role="status" aria-live="polite"></div>
   </body>
 </html>
