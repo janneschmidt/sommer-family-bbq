@@ -131,7 +131,7 @@ h2 { font: 500 clamp(42px, 5.8vw, 76px) / 1.02 var(--serif); letter-spacing: -0.
 .location { padding: 120px 0; display: grid; grid-template-columns: 1.18fr .82fr; gap: 80px; align-items: center; }
 .aerial-wrap { position: relative; border: 10px solid var(--paper); box-shadow: 0 18px 50px rgba(23,61,45,.12); }
 .aerial-wrap img { width: 100%; display: block; }
-.location-pin { width: 46px; height: 46px; position: absolute; left: 53%; top: 37%; transform: translate(-50%, -100%); border-radius: 50% 50% 50% 0; background: var(--pink); box-shadow: 0 5px 18px rgba(40,20,28,.3); rotate: -45deg; }
+.location-pin { width: 46px; height: 46px; position: absolute; left: 53%; top: 49%; transform: translate(-50%, -100%); border-radius: 50% 50% 50% 0; background: var(--pink); box-shadow: 0 5px 18px rgba(40,20,28,.3); rotate: -45deg; }
 .location-pin span { width: 14px; height: 14px; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); border-radius: 50%; background: var(--paper); }
 .location-copy h2 { margin: 0; }
 .address { margin: 30px 0; font: 500 22px / 1.5 var(--serif); }
